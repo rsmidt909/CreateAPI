@@ -58,9 +58,9 @@ namespace ApiCreation.Controllers
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
-            //var thing1337 = db.Movies.Find(id);
-            //db.Movies.Remove(thing1337);
-            //db.SaveChanges();
+            var movie = db.Movies.Find(id);
+            db.Movies.Remove(movie);
+            db.SaveChanges();
 
         }
     }
