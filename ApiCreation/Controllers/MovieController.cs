@@ -1,4 +1,5 @@
-﻿using ApiCreation.Models;
+﻿using ApiCreation.AllowCrossSite;
+using ApiCreation.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace ApiCreation.Controllers
 
 
         // GET api/<controller>
+        [AllowCrossSite]
         public IEnumerable<Movie> GetAll()
         {
             List<Movie> thing = db.Movies.ToList();
@@ -28,6 +30,7 @@ namespace ApiCreation.Controllers
         }
 
         // GET api/<controller>/5
+        [AllowCrossSite]
         public Movie Get(int id)
         {
             var movie = db.Movies.Find(id);
@@ -35,6 +38,7 @@ namespace ApiCreation.Controllers
         }
 
         // POST api/<controller>
+        [AllowCrossSite]
         public void Post([FromBody]Movie value)
         {
 
@@ -48,14 +52,20 @@ namespace ApiCreation.Controllers
         }
 
         // PUT api/<controller>/5
+        [AllowCrossSite]
         public void Put(int id, [FromBody]Movie value)
         {
+            if (value == null)
+            {
+                throw new Exception("That movie is empty");
+            }
             var movie = db.Movies.Find(id);
             movie = value;
             db.SaveChanges();
         }
 
         // DELETE api/<controller>/5
+        [AllowCrossSite]
         public void Delete(int id)
         {
             var movie = db.Movies.Find(id);
