@@ -30,8 +30,8 @@ namespace ApiCreation.Controllers
         // GET api/<controller>/5
         public Movie Get(int id)
         {
-            //var thing2 = db.Movies.Find(id);
-            //return thing2;
+            var movie = db.Movies.Find(id);
+            return movie;
         }
 
         // POST api/<controller>
