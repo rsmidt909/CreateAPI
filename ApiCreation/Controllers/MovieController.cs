@@ -50,9 +50,9 @@ namespace ApiCreation.Controllers
         // PUT api/<controller>/5
         public void Put(int id, [FromBody]Movie value)
         {
-            //var thing1 = db.Movies.Find(id);
-            //thing1 = value;
-            //db.SaveChanges();
+            var movie = db.Movies.Find(id);
+            movie = value;
+            db.SaveChanges();
         }
 
         // DELETE api/<controller>/5
