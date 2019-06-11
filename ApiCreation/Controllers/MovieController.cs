@@ -38,12 +38,12 @@ namespace ApiCreation.Controllers
         public void Post([FromBody]Movie value)
         {
 
-            //if(value == null)
-            //{
-            //    throw new Exception("That aint right punk");
-            //}
-            //db.Movies.Add(value);
-            //db.SaveChanges();
+            if (value == null)
+            {
+                throw new Exception("That movie is empty");
+            }
+            db.Movies.Add(value);
+            db.SaveChanges();
 
         }
 
