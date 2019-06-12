@@ -28,6 +28,11 @@ namespace ApiCreation.Controllers
             List<Movie> thing = db.Movies.ToList();
             return thing;
         }
+        //public IEnumerable<Movie> GetTitles(string Title)
+        //{
+        //    List<Movie> thing = db.Movies.Where(m => m.Title == Title).ToList();
+        //    return thing;
+        //}
 
         // GET api/<controller>/5
         [AllowCrossSite]
