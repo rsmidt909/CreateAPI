@@ -5,6 +5,7 @@
     <title>Movies</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "Content/style.css"/>
 
 
 </head>
@@ -20,6 +21,7 @@
         
         <button type="button" onclick="GetMovies()">Get Movies</button>
     </div>
+    <center>
     <div id="table">
         <table>
             <thead>
@@ -33,12 +35,11 @@
                 </tr>
             </tbody>
         </table>
-
-
     </div>
+    </center>
     <form id="SearchMovie">
         <fieldset>
-            <legend>Search</legend>
+            <legend><h2>Search</h2></legend>
             <p>Please use proper capitalization and punctuation or you may not get your desired results.</p>
             <p>
                 <label>Search</label>
@@ -50,9 +51,9 @@
         </fieldset>
     </form>
     
-    <form id="newMovie">
+    
         <fieldset>
-            <legend>Add Movie</legend>
+            <legend><h2>Add Movie</h2></legend>
             <p>
                 <label>Title</label>
                 <input type="text" id="title" name="title" value="Title Of Movie" />
@@ -69,13 +70,54 @@
                 <button id="SubmitButton" onclick="doIt()">Submit</button>
             </div>
         </fieldset>
-    </form>
+    <center>
+        <fieldset>
+            <legend><h2>Edit Select Movie</h2></legend>
+            <div id="EditTable">
+                <table>
+                    <thead>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Director</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Please use proper capitalization and punctuation or you may not get your desired results.</p>
+            <p>
+                <label>Search</label>
+                <input type="text" id="searchSpecific" name="search" value="Search"/>
+            </p>
+            <div>              
+                <button id="SubmitButton" onclick="FindMovie()">Find Movie</button>
+            </div>
+            <p>
+                <label>Title</label>
+                <input type="text" id="editTitle" name="editTitle" value="New Title Of Movie" />
+            </p>
+            <p>
+                <label>Genre</label>
+                <input type="text" id="editGenre" value="New Type Of Genre" />
+            </p>
+            <p>
+                <label>Director</label>
+                <input type="text" id="editDirector" value="New Name Of Director" />
+            </p>
+            <div>              
+                <button id="SubmitButton" onclick="EditMovie()">Submit</button>
+            </div>
+        </fieldset>
+    </center>
 
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="Content/script.js"></script>
 
 </body>
 

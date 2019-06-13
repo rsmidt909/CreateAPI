@@ -36,7 +36,43 @@ function doIt() {
     });
 }
 
+function FindMovie() {
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', 'http://localhost:5006/api/movie', true);
+    xhr.send();
+    xhr.onload = function () {
+        var data = JSON.parse(xhr.response)
+        var table = $("#EditTable tbody");
+        $("#EditTable tbody").empty();
+        var searchData = $("#searchSpecific")[0].value
+        if(searchData==""){
+            alert("Please Enter A Movie Title Into The Edit Movie Search Box")
+        } else{
+            data.forEach(movie=>{
+                if(searchData == movie.Title){
+                    table.append("<tr><td>" + movie.Title + "</td><td>" + movie.Genre + "</td><td>" + movie.DirectorName + "</td></tr>")
+                    return data;
+                }
+            })
+        }
+    }
+}
 
+function EditMovie() {
+    var editData = FindMovie()
+    var success;
+   // var thing = { Title: $("#title")[0].value, Genre: $("#genre")[0].value, DirectorName: $("#director")[0].value };
+   // var myJSON = JSON.stringify(thing);
+    //function Add( e ){
+    $.ajax({
+        url: 'http://localhost:5006/api/movie',
+        dataType: 'json',
+        type: 'put',
+        headers: { "Content-Type": 'application/json' },
+        data: editData,
+        success: success
+    });
+}
 
 // function Search(){
 //     var data;

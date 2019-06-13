@@ -1,0 +1,52 @@
+#newMovie{
+    align-content: center;
+}
+div EditTable{
+    position: center;
+    text-align: center;
+    color:lawngreen;
+    padding-top: 50px;
+    font-family: sans-serif;
+}
+body{
+    position: center;
+    text-align: center;
+    font-family: sans-serif;
+    background-image: url(images/mst.jpg);
+    
+    
+}
+p{
+    color: lawngreen;
+}
+div table{
+    position: center;
+    text-align: center;
+    color:lawngreen;
+    padding-top: 50px;
+    font-family: sans-serif;
+}
+fieldset{
+    border-radius: 100px;
+ 
+    
+}
+h1{
+    padding-bottom: 50px;
+    color:lawngreen;
+}
+div getMovies{
+    padding-bottom: 20px;
+}
+#genre{
+    align-content: center;
+}
+th{
+    padding-left: 80px;
+    padding-right:80px;
+    padding-bottom: 20px;
+}
+h2{
+    color:lawngreen;
+    
+}
