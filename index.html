@@ -17,7 +17,7 @@
     <h1>Check out these movies!</h1>
 
     <div id="getMovies">
-        <h2>*********</h2>
+        
         <button type="button" onclick="GetMovies()">Get Movies</button>
     </div>
     <div id="table">
@@ -36,10 +36,19 @@
 
 
     </div>
-    <div id="Add">
-        <h2>*********</h2>
-        <button type="button" onclick="thing()">Add</button>
-    </div>
+    <form id="SearchMovie">
+        <fieldset>
+            <legend>Search</legend>
+            <p>
+                <label>Search</label>
+                <input type="text" id="search" name="search"/>
+            </p>
+            <div id="Search">               
+                <button type="button" onclick="GetMovies()" value=null>Search</button>
+            </div>
+        </fieldset>
+    </form>
+    
     <form id="newMovie">
         <fieldset>
             <legend>Add Movie</legend>
@@ -55,16 +64,12 @@
                 <label>Director</label>
                 <input type="text" id="director" value="Name Of Director" />
             </p>
-            <div>
-                <h2>*********</h2>
+            <div>              
                 <button id="SubmitButton" onclick="doIt()">Submit</button>
             </div>
         </fieldset>
     </form>
-    <div id="Remove">
-        <h2>*********</h2>
-        <button type="button" onclick="remove()">Remove</button>
-    </div>
+
 
 
 

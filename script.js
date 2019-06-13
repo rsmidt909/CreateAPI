@@ -1,18 +1,23 @@
 function GetMovies() {
     var xhr = new XMLHttpRequest()
-
     xhr.open('GET', 'http://localhost:5006/api/movie', true);
-
     xhr.send();
-
     xhr.onload = function () {
         var data = JSON.parse(xhr.response)
-        //$.each(data.Movies, function(title, genre, director)){
         var table = $("#table tbody");
-        data.forEach(movie => {
-            table.append("<tr><td>" + movie.Title + "</td><td>" + movie.Genre + "</td><td>" + movie.DirectorName + "</td></tr>");
-        });
-
+        $("#table tbody").empty();
+        var searchData = $("#search")[0].value
+        if(searchData==""){
+            data.forEach(movie => {
+                table.append("<tr><td>" + movie.Title + "</td><td>" + movie.Genre + "</td><td>" + movie.DirectorName + "</td></tr>");
+            });
+        } else{
+            data.forEach(movie=>{
+                if(searchData == movie.Title||searchData == movie.Genre||searchData==movie.DirectorName){
+                    table.append("<tr><td>" + movie.Title + "</td><td>" + movie.Genre + "</td><td>" + movie.DirectorName + "</td></tr>")
+                }
+            })
+        }
     }
 }
 
@@ -33,7 +38,18 @@ function doIt() {
 
 
 
-
+// function Search(){
+//     var data;
+//     var searchValue = $("#search")[0].value;
+//     $.get({
+//         get:'http://localhost:5006/api/movie',
+//         data: data,
+//         success: function(){           
+//             if(searchValue == data.Title){
+//             console.log(data.title)};
+//         }
+//     })
+// }
 
 
 

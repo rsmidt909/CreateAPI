@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "dc95659a-93d6-4f20-9a77-8ed49502de42",
+		"name": "customapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "apicustom",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5006/api/movie/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"name": "Content-Type",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Title\": \"Nightmare Before Christmas\"\n\t\"Genre\": \"Drama\"\n\t\"DirectorName\":\"Tim Burton\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5006/api/movie/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"api",
+						"movie",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

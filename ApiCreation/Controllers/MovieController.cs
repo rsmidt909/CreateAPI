@@ -31,13 +31,13 @@ namespace ApiCreation.Controllers
             List<Movie> thing = db.Movies.ToList();
             return thing;
         }
-        //public IEnumerable<Movie> GetTitles(string Title)
+        //public Movie Get(string Title)
         //{
-        //    List<Movie> thing = db.Movies.Where(m => m.Title == Title).ToList();
-        //    return thing;
+        //   Movie movie = db.Movies.Where(m=>m.Title == Title).ToArray();
+        //    return movie;
         //}
 
-        // GET api/<controller>/5
+        //GET api/<controller>/5
         [AllowCrossSite]
         public Movie Get(int id)
         {
