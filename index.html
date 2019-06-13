@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Movies</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    
+
+
 </head>
 <title>
 
 </title>
+
 <body>
 
-<h1>Check out these movies!</h1>
+    <h1>Check out these movies!</h1>
 
-<div id="getMovies">
-    <h2>*********</h2>
-    <button type="button" onclick="GetMovies()">Get Movies</button>
-  </div>
-<div id="table">
-<table>
-    <thead>
-        <th>Title</th>
-        <th>Genre</th>
-        <th>Director</th>
-    </thead>
-<tbody>
-    <tr>
-    <td></td>
-    </tr>
-</tbody>
-</table>
+    <div id="getMovies">
+        <h2>*********</h2>
+        <button type="button" onclick="GetMovies()">Get Movies</button>
+    </div>
+    <div id="table">
+        <table>
+            <thead>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Director</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
 
 
-</div>
-<div id="Add">
-    <h2>*********</h2>
-    <button type="button" onclick="thing()">Add</button>
-  </div>
-  <form>
-      <fieldset>
-          <legend>Add Movie</legend>
-          <p>
-              <label>Title</label>
-              <input type = "text"
-              id = "title"
-              value = "Title Of Movie"/>
-          </p>
-          <p>
-                <label>Genre</label>
-                <input type = "text"
-                id = "genre"
-                value = "Type Of Genre"/>
+    </div>
+    <div id="Add">
+        <h2>*********</h2>
+        <button type="button" onclick="thing()">Add</button>
+    </div>
+    <form id="newMovie">
+        <fieldset>
+            <legend>Add Movie</legend>
+            <p>
+                <label>Title</label>
+                <input type="text" id="title" name="title" value="Title Of Movie" />
             </p>
             <p>
-                    <label>Director</label>
-                    <input type = "text"
-                    id = "director"
-                    value = "Name Of Director"/>
-                </p>
-      </fieldset>
-  </form>
-<div id="Remove">
-    <h2>*********</h2>
-    <button type="button" onclick="remove()">Remove</button>
-</div>
+                <label>Genre</label>
+                <input type="text" id="genre" value="Type Of Genre" />
+            </p>
+            <p>
+                <label>Director</label>
+                <input type="text" id="director" value="Name Of Director" />
+            </p>
+            <div>
+                <h2>*********</h2>
+                <button id="SubmitButton" onclick="doIt()">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+    <div id="Remove">
+        <h2>*********</h2>
+        <button type="button" onclick="remove()">Remove</button>
+    </div>
 
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
