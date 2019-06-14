@@ -61,7 +61,10 @@ function FindMovie() {
 function EditMovie() {
     var editData = FindMovie()
     var success;
-   // var thing = { Title: $("#title")[0].value, Genre: $("#genre")[0].value, DirectorName: $("#director")[0].value };
+    editData.DirectorName = $("#editDirector")[0].value;
+    editData.Title = $("#editTitle")[0].value;
+    editData.Genre = $("#editGenre")[0].value;
+   //var thing = { Title: $("#title")[0].value, Genre: $("#genre")[0].value, DirectorName: $("#director")[0].value };
    // var myJSON = JSON.stringify(thing);
     //function Add( e ){
     $.ajax({
